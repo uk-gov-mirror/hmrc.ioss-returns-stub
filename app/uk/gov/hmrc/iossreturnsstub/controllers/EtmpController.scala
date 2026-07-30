@@ -82,7 +82,7 @@ class EtmpController @Inject()(
         def generateObligations(idNumber: String): EtmpObligations = idNumber match {
           case "IM9001234568" | "IM9029999994" | "IM9039999994" | "IM9059999994" | "IM9001233211" | "IM9004999991"
                | "IM9019999998" | "IM9004999993" | "IM9004999992" | "IM9004999994" | "IM9005999993" | "IM9005999996"
-               | "IM9005999991" | "IM9005999992" | "IM9005999994" | "IM9029999997" | "IM9019999997" => StubData.multipleCorrectionPeriods
+               | "IM9005999991" | "IM9005999992" | "IM9005999994" | "IM9029999997" | "IM9019999997" | "IM9003232323" => StubData.multipleCorrectionPeriods
           case "IM9001234569" => StubData.multipleCorrectionPeriodYears
           case "IM9001234999" | "IM9001238999" => StubData.moreThanThreeCorrectionPeriodYears
           case "IM9001239999" => StubData.moreThanThreeYearsOpenReturns
@@ -115,7 +115,8 @@ class EtmpController @Inject()(
           case "IM9001144671" | "IM9001144672" | "IM9002144671" | "IM9002144672" => StubData.threeMonthsAndTwoMonthsAgoNetp
           case "IM9001144884" => StubData.twoFulfilledIntExcluded
           case "IM9001236666" => StubData.oneFulfilledOneOpenIntExcluded
-          case "IM9001144771" | "IM9001144772" | "IM9001144777" | "IM9006655443" | "IM9006655552" => StubData.twoFulfilledInt
+          case "IM9001144771" | "IM9001144772" | "IM9001144777" | "IM9006655443" | "IM9006655552"
+                | "IM9002221221" | "IM9002221222" | "IM9002221223" | "IM9002221224" => StubData.twoFulfilledInt
           case "IM9001144773" | "IM9001144774" | "IM9001144775" | "IM9001144776" | "IM9001144778"
                 | "IM9006655441" | "IM9006655442" | "IM9006655551" | "IM9006655553" => StubData.allOpenInt
           case "IM9000000044" => StubData.fulfilledTwoMonthsAgo
